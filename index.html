@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic page setup -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Page title shown in browser tab -->
+  <title>Fry Rating Site</title>
+
+  <style>
+    /* Main page styling */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fff7d6;
+      color: #2b2100;
+    }
+
+    /* Header area */
+    header {
+      background: #ffcc33;
+      padding: 30px 20px;
+      text-align: center;
+      border-bottom: 5px solid #d99a00;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 42px;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+    /* Main content container */
+    main {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    /* Restaurant card */
+    .restaurant-card {
+      background: white;
+      border: 3px solid #e0a800;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      margin-bottom: 30px;
+    }
+
+    .restaurant-card h2 {
+      margin-top: 0;
+      font-size: 32px;
+      color: #b22222;
+    }
+
+    /* Ranking badge */
+    .ranking {
+      display: inline-block;
+      padding: 10px 15px;
+      background: #eee;
+      border-radius: 10px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    /* Info table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    th,
+    td {
+      border: 1px solid #d6b45c;
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #ffe680;
+      width: 30%;
+    }
+
+    td {
+      background: #fffdf0;
+    }
+
+    /* Quality section */
+    .quality-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .quality-box {
+      background: #fff1a8;
+      border: 2px solid #d99a00;
+      border-radius: 12px;
+      padding: 15px;
+    }
+
+    .quality-box h3 {
+      margin-top: 0;
+    }
+
+    /* Form section near the bottom of the page */
+    .submit-section {
+      background: #fff1a8;
+      border: 3px dashed #d99a00;
+      border-radius: 15px;
+      padding: 25px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .submit-section h2 {
+      margin-top: 0;
+      color: #b22222;
+      font-size: 30px;
+    }
+
+    .submit-section p {
+      font-size: 17px;
+    }
+
+    /* Google Forms button */
+    .form-button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 14px 22px;
+      background: #ffcc33;
+      color: #2b2100;
+      border: 3px solid #b87900;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .form-button:hover {
+      background: #ffe680;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #2b2100;
+      color: white;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #ffcc33;
+      font-weight: bold;
+    }
+
+    /* Small screen improvements */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 32px;
+      }
+
+      table,
+      tbody,
+      tr,
+      th,
+      td {
+        display: block;
+        width: 100%;
+      }
+
+      th {
+        box-sizing: border-box;
+      }
+
+      td {
+        box-sizing: border-box;
+        margin-bottom: 10px;
+      }
+
+      .form-button {
+        width: 90%;
+        box-sizing: border-box;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Site header -->
+  <header>
+    <h1>🍟 Fry Rating Site</h1>
+    <p>Rating restaurant fries by type, taste, crispiness, color, texture, sauces, and more.</p>
+  </header>
+
+  <!-- Main page content -->
+  <main>
+    <!-- First restaurant entry: Wendy's -->
+    <section class="restaurant-card">
+      <h2>Wendy's</h2>
+
+      <!-- Ranking can be changed later when you officially rate it -->
+      <div class="ranking">Ranking: Undefined / 30</div>
+
+      <!-- Main restaurant fry information -->
+      <table>
+        <tr>
+          <th>Name</th>
+          <td>Wendy's</td>
+        </tr>
+
+        <tr>
+          <th>Fry Type</th>
+          <td>Normal</td>
+        </tr>
+
+        <tr>
+          <th>Cost USD</th>
+          <td>Unknown</td>
+        </tr>
+
+        <tr>
+          <th>Portion Size Per Order</th>
+          <td>About 20–40 fries</td>
+        </tr>
+
+        <tr>
+          <th>Location</th>
+          <td>Undefined because Wendy's is a chain restaurant</td>
+        </tr>
+
+        <tr>
+          <th>Seasoning(s)</th>
+          <td>Unknown</td>
+        </tr>
+
+        <tr>
+          <th>Cold Sauces</th>
+          <td>Unknown</td>
+        </tr>
+
+        <tr>
+          <th>Hot Sauces</th>
+          <td>Hot Chili Sauce</td>
+        </tr>
+      </table>
+
+      <!-- Quality ratings section -->
+      <div class="quality-grid">
+        <div class="quality-box">
+          <h3>Taste</h3>
+          <p>Good</p>
+        </div>
+
+        <div class="quality-box">
+          <h3>Crispiness</h3>
+          <p>Good</p>
+        </div>
+
+        <div class="quality-box">
+          <h3>Color</h3>
+          <p>Yellow, with the occasional burnt black or potato peel dark spots.</p>
+        </div>
+
+        <div class="quality-box">
+          <h3>Texture</h3>
+          <p>What a normal fry should feel like.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rating guide section -->
+    <section class="restaurant-card">
+      <h2>Ranking Scale</h2>
+
+      <!-- Explains the 1-30 fry rating system -->
+      <table>
+        <tr>
+          <th>1–5</th>
+          <td>Terrible fries</td>
+        </tr>
+
+        <tr>
+          <th>6–10</th>
+          <td>Bad fries</td>
+        </tr>
+
+        <tr>
+          <th>11–15</th>
+          <td>Mid fries</td>
+        </tr>
+
+        <tr>
+          <th>16–20</th>
+          <td>Good fries</td>
+        </tr>
+
+        <tr>
+          <th>21–25</th>
+          <td>Great fries</td>
+        </tr>
+
+        <tr>
+          <th>26–30</th>
+          <td>Legendary fries</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- Google Forms submission section at the bottom -->
+    <section class="submit-section">
+      <h2>Submit a Fry Review</h2>
+      <p>Found fries that deserve scientific investigation? Send in a restaurant fry rating here.</p>
+
+      <a
+        class="form-button"
+        href="https://docs.google.com/forms/d/e/1FAIpQLSdADDMCyITXgBFymg99lcVsxkfkmBgjToPTI8JGzYn_z5PwUw/viewform?usp=publish-editor"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Open Google Form 🍟
+      </a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>Fry Rating Site | Built for serious fry science! 🍟</p>
+    <p>
+      Submit reviews:
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSdADDMCyITXgBFymg99lcVsxkfkmBgjToPTI8JGzYn_z5PwUw/viewform?usp=publish-editor"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Google Forms Fry Review
+      </a>
+    </p>
+  </footer>
+</body>
+</html>
